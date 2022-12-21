@@ -3,19 +3,19 @@
 //////////////////////
 
 // 1) -------------------------------------------------------
-let numbers = [0,1,2,3,4,5,6,7,8,9]
+let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 function printNumbers(numbers) {
-    for (let i = 0; i < numbers.length; i++) {
-      console.log(numbers[i])
-    }
+  for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i])
   }
-  
+}
+
 // Q: Given an array of numbers, what is the time complexity of this function?
-// ANSWER:
+// ANSWER: O(n)
 
 // Q: What is the space complexity?
-// ANSWER:
+// ANSWER: O(n)
 
 
 
@@ -24,41 +24,41 @@ function printNumbers(numbers) {
 // You are challenged to find the 4th element of an array, and you came up with this solution:
 
 function findFourth(numbers) {
-    var count = 1
-    var answer = 0
-  
-    for (let i = 0; i < numbers.length; i++) {
-        if (count === 4) {
-            answer = numbers[i]
-            return
-        } else {
-            count += 1
-        }
+  var count = 1
+  var answer = 0
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (count === 4) {
+      answer = numbers[i]
+      return
+    } else {
+      count += 1
     }
   }
+}
 
 // Q: What is the time complexity of of this solution?
-// ANSWER:
+// ANSWER: 0(1)
 
 // Q: Given an array of numbers, what is the space complexity of this function?
-// ANSWER:
+// ANSWER: O(1)
 
 
 // Q: Could you come up with a solution that has a better time complexity? If so, write out that solution and note the time complexity. If not, why not?
-// ANSWER:
+// ANSWER: The time complexity for the existing is the best time complexity.
 
 
 // 3) -------------------------------------------------------
 function printA() {
-    for (let i = 0; i < 5; i++) {
-        console.log(i)
-    }
+  for (let i = 0; i < 5; i++) {
+    console.log(i)
+  }
 }
 // Q: What is the time complexity of this function?
-// ANSWER:
+// ANSWER: O(1)
 
 // Q: What is the space complexity of this function?
-// ANSWER:
+// ANSWER: O(1)
 
 // 4) -------------------------------------------------------
 function printB(number) {
@@ -67,10 +67,10 @@ function printB(number) {
   }
 }
 // Q: What is the time complexity of this function?
-// ANSWER:
+// ANSWER: O(n)
 
 // Q: What is the space complexity of this function?
-// ANSWER:
+// ANSWER: O(1)
 
 
 
@@ -83,39 +83,39 @@ function printC(num, arr) {
   }
 }
 // Q: What is the time complexity of this function?
-// ANSWER:
+// ANSWER: O(n^2)
 
 // Q: What is the space complexity of this function?
-// ANSWER:
+// ANSWER:  O(1)
 
 
 // 6) -------------------------------------------------------
 function nested(numbers) {
-    for (let i = 0; i < numbers.length; i++) {
-      for (let j = 0; j < numbers.length; j++) {
-        console.log(j)
-      }
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = 0; j < numbers.length; j++) {
+      console.log(j)
     }
   }
+}
 // Q: What is the time complexity of this function?
-// ANSWER:
+// ANSWER: O(n^2)
 
 // Q: What is the space complexity of this function?
-// ANSWER:
+// ANSWER: O(1)
 
 
 
 // 7) -------------------------------------------------------
-let numbers = [76,35,73,13,4,88,23,12,86,1,54,9,10,2]
+let numbers2 = [76, 35, 73, 13, 4, 88, 23, 12, 86, 1, 54, 9, 10, 2]
 // remember numbers could be reassigned, added to, etc.
 let newNumbersA = numbers.filter((num) => {
   return num < 5
 })
 // Q: What is the time complexity of the filter higher-order function?
-// ANSWER:
+// ANSWER: O(n)
 
 // Q: What is the space complexity of the filter higher-order function?
-// ANSWER:
+// ANSWER: O(n)
 
 
 // 8) -------------------------------------------------------
@@ -124,10 +124,10 @@ let newNumbersB = numbers.map((num) => {
   return num * 3
 })
 // Q: What is the time complexity of the map higher-order function?
-// ANSWER:
+// ANSWER: O(n)
 
 // Q: What is the space complexity of the map higher-order function?
-// ANSWER:
+// ANSWER:O(n)
 
 
 
@@ -139,37 +139,37 @@ let newNumbersB = numbers.map((num) => {
 
 // 9) -------------------------------------------------------
 function removeNum() {
-    numbers.splice(3,1)
+  numbers.splice(3, 1)
 }
 // Q: What is the time complexity of the function?
-// ANSWER:
-
+// ANSWER: O(n)
+// when an element is removed from an array, it has to be re-indexed for all remaining elements in array
 
 // 10) -------------------------------------------------------
 function insertNum() {
-    numbers.splice(3, 0, 19)
+  numbers.splice(3, 0, 19)
 }
 // Q: What is the time complexity of the function?
-// ANSWER:
-
+// ANSWER: O(n)
+// when an element is added to an array, it has to be re-indexed for all remaining elements in array
 
 // 11) -------------------------------------------------------
 function pushNum() {
-    numbers.push(25)
+  numbers.push(25)
 }
 // Q: What is the time complexity of the function?
-// ANSWER:
+// ANSWER: O(1)
 
 
 // 12) -------------------------------------------------------
 // Given an array of names....
 function printFirstTwoNames(array) {
-    console.log(array[0])
-    console.log(array[1])
+  console.log(array[0])
+  console.log(array[1])
 }
 
 // Q: What is the time complexity of the function? 
-// ANSWER:
+// ANSWER: O(1)
 
 
 
@@ -186,17 +186,17 @@ function printFirstTwoNames(array) {
 // ex: [[1,2,3], ['a','b','c'], [5,null,'x',0]]
 // NOT: [[1,2,3], ['a', ['an', 'invalid', '(grand)child', 'array], 'b', 'c'], [6,7,8,9,10]]
 function arrInception(parentArr) {
-    for (let i = 0; i < parentArr.length; i++) {
-      let childArr = parentArr[i]
-      for (let j = 0; j < childArr.length; j++) {
-        console.log(`value at index ${j} in child arr (at ${i} in parent arr): ${childArr[j]}`)
-      }
+  for (let i = 0; i < parentArr.length; i++) {
+    let childArr = parentArr[i]
+    for (let j = 0; j < childArr.length; j++) {
+      console.log(`value at index ${j} in child arr (at ${i} in parent arr): ${childArr[j]}`)
     }
   }
-  // Q: What is the space complexity of this function?
-  // ANSWER:
-  
-  
+}
+// Q: What is the space complexity of this function?
+// ANSWER:O(1)
+
+
 // 14) You are challenged to find the squared value of each number in an array. This is not the best solution, but it is what you come up with anyway...
 
 function getNumbersSquared(numbers) {
@@ -212,11 +212,12 @@ function getNumbersSquared(numbers) {
 }
 
 // Q: What is the space complexity of this function?
-// ANSWER:
+// ANSWER: O(n)
 
 
 // Q: Is it possible to improve this function's space complexity? If it is, write a new function below.
-// ANSWER:
+// ANSWER: No
+
 
 
 // 15) Here are two functions that you came up with to count how many of each letter is in a given string and return an object with the individual counts: 
@@ -260,14 +261,14 @@ function countLetters(str) {
     }
   })
 
-return letters
+  return letters
 }
 
 /////////////////////////////
 
 function countLettersRoundTwo(str) {
   // this contains a RegEx or Regular Expression, feel free to google
-  str = str.toLowerCase().replace(/([^a-z])+/g,'')
+  str = str.toLowerCase().replace(/([^a-z])+/g, '')
   let letters = {}
   for (let i = 0; i < str.length; i++) {
     if (letters.hasOwnProperty(str[i])) {
@@ -281,13 +282,13 @@ function countLettersRoundTwo(str) {
 
 
 // Q: Do these functions have the same space complexity?
-// ANSWER:
+// ANSWER: Yes
 
 
 // Q: What is the space complexity of each? 
-// ANSWER - countLetters:
-// ANSWER - countLettersRoundTwo:
+// ANSWER - countLetters: O(n)
+// ANSWER - countLettersRoundTwo: O(n)
 
 
 // Q: Explain how you came to your conclusions about the space complexity of each function. 
-// ANSWER: 
+// ANSWER: The space used will grow as the input size increases.
